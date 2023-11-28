@@ -2,3 +2,12 @@ https://bea.stollnitz.com/blog/rag/
 https://renumics.com/blog/voice-analytics-with-transformers/
 https://thisisunpacked.substack.com/p/ai-regulation-mechanisms-based-approach
 https://plainenglish.io/blog/fine-tuning-llama2-0-with-qloras-single-gpu-magic
+https://mathdatasimplified.com/how-to-structure-a-data-science-project-for-readability-and-transparency-2/
+https://www.nlplanet.org/course-practical-nlp/02-practical-nlp-first-tasks/16-knowledge-graph-from-text.html
+https://timdenning.com/ive-written-5000-blog-articles-that-generated-500m-views-7-figures-heres-how-to-stand-out/
+https://timdenning.com/recession-gets-worse/
+https://timdenning.com/writers-make-money/
+https://timdenning.com/writer-passive-income/
+https://docs.kanaries.net/articles/open-source-github-projects-2023
+https://kaitchup.substack.com/p/qlora-fine-tune-a-large-language-model-on-your-gpu-27bed5a03e2b
+https://theconversation.com/how-will-ai-affect-workers-tech-waves-of-the-past-show-how-unpredictable-the-path-can-be-205734
