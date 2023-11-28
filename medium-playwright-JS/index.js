@@ -59,24 +59,16 @@ function hashURL(url, encoding='hex') {
 }
 
 
-async function main() {
-    // Initialize (chromium) browser instance.
-    const browser = await playwright.chromium.launch({
-        // headless: false,    // run with GUI or headless
-        headless: true,
-    });
-
-    // Initialize new page in the browser and go to the target website.
-    const article = 'https://medium.com/analytics-vidhya/scraping-web-apps-using-direct-http-request-f5c02a2874fe';
-    const page = await browser.newPage();
-    await page.goto(article);
+async function scrapeArticle(page, url, saveOriginalHTML=true) {
+    // Go to the article URL.
+    await page.goto(url);
 
     // Isolate a component from the page.
     const section = await page.locator('section');
     const sectionHTML = await section.innerHTML();
 
     // Hash the article URL to create a set folder.
-    const folderHash = hashURL(article);
+    const folderHash = hashURL(url);
 
     // Initialize the save folders for the the article.
     const [folderPath, imagesPath, videosPath] = createFolders(folderHash);
@@ -89,14 +81,48 @@ async function main() {
         await downloadImage(imgURL, imgPath);
     }
 
-    // Write the HTML to a file.
+    // File paths to write the HTML to a file.
     const filePath = path.join(folderPath, 'article.html');
-    if (!fs.existsSync(filePath)) {
-        fs.writeFileSync(filePath, sectionHTML);
+    const filePathOriginalCopy = path.join(folderPath, 'article_original.html');
+    
+    // Save an original copy of the HTML code if specified.
+    if (!fs.existsSync(filePathOriginalCopy) && saveOriginalHTML) {
+        fs.writeFileSync(filePathOriginalCopy, sectionHTML);
     }
 
     // TODO: Modify the HTML code (returned from 
     // section.innerHTML()).
+    if (!fs.existsSync(filePath)) {
+        fs.writeFileSync(filePath, sectionHTML);
+    }
+}
+
+
+async function main() {
+    // Read in urls from links.txt
+    const linksFile = './links.txt';
+    const fileContent = fs.readFileSync(linksFile, 'utf-8');
+    const addresses = fileContent.split('\n');
+
+    // Remove any trailing newline from the last line.
+    if (addresses.length > 0 && addresses[addresses.length - 1] === '') {
+        addresses.pop();
+    }
+
+    // Initialize (chromium) browser instance.
+    const browser = await playwright.chromium.launch({
+        // headless: false,    // run with GUI or headless
+        headless: true,
+    });
+
+    // Initialize new page in the browser and go to the target website.
+    // const article = 'https://medium.com/analytics-vidhya/scraping-web-apps-using-direct-http-request-f5c02a2874fe';
+    const page = await browser.newPage();
+    
+    // Iterate through each address, scraping it if has not already been processed.
+    for (const address of addresses) {
+        await scrapeArticle(page, address);
+    }
 
     // Close the browser.
     await browser.close();
