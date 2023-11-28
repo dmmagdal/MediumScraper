@@ -6,14 +6,23 @@ Description: A simple script that works to download and catalog medium articles 
 ### Requirements/Todos
 
 [ ] All images are saved as either png or svg
+
 [ ] Save (embedded) videos locally in AV1 compressed format <- AV1 is not a compression format, but an encoding! Investigate possible (lossless compressed) video formats
+
 [ ] Articles can be restored to a "Medium"-esque style (with a default CSS)
+
 [ ] Dockerize
+
 [ ] Map all article urls to their local folder hashes (and vice versa) in a JSON file (keep updated as well)
+
 [ ] Constantly check for updates to list
+
 [ ] Pull text data for later analysis/projects/organization -> this can be done from the HTML saved
+
 [ ] Run scraper continuously (only operates when it detects new urls) and mark urls that are gone
+
 [ ] Modify local copies of the HTML to source media (images and videos) from local copies when no internet is detected
+
 [ ] Better organize code/refactor for typescript
 
 
