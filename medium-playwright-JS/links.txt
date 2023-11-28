@@ -163,3 +163,4 @@ https://medium.com/@pnitsan/exporting-and-running-a-deep-learning-model-in-the-b
 https://medium.com/@fireworks.ai/multi-query-attention-is-all-you-need-db072e758055
 https://medium.com/@nidhibits224/multi-query-attention-speeding-ai-ad8fa1626b82
 https://techfirst.medium.com/forced-alignment-how-to-match-audio-with-a-transcript-via-machine-learning-dd19da8c0f04
+https://medium.com/analytics-vidhya/scraping-web-apps-using-direct-http-request-f5c02a2874fe
