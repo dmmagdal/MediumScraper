@@ -1,0 +1,4 @@
+https://bea.stollnitz.com/blog/rag/
+https://renumics.com/blog/voice-analytics-with-transformers/
+https://thisisunpacked.substack.com/p/ai-regulation-mechanisms-based-approach
+https://plainenglish.io/blog/fine-tuning-llama2-0-with-qloras-single-gpu-magic

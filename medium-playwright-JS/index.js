@@ -74,31 +74,25 @@ async function main() {
     // Isolate a component from the page.
     const section = await page.locator('section');
     const sectionHTML = await section.innerHTML();
-    console.log(sectionHTML);
 
     // Hash the article URL to create a set folder.
     const folderHash = hashURL(article);
-    console.log(folderHash);
-    console.log(folderHash.length);
-    console.log(article.length);
 
     // Initialize the save folders for the the article.
     const [folderPath, imagesPath, videosPath] = createFolders(folderHash);
 
     // Extract all photos from the page and create a local save copy on disk.
     const images = await section.locator('img').all();
-    console.log(`number of images ${images.length}`);
     for (let i = 0; i < images.length; i++) {
         const imgURL = await images[i].getAttribute('src');
         const imgPath = path.join(imagesPath, `image_${i}.png`);    // TODO: make sure all images can be saved in PNG format.
-        console.log(imgURL);
         await downloadImage(imgURL, imgPath);
     }
 
     // Write the HTML to a file.
     const filePath = path.join(folderPath, 'article.html');
     if (!fs.existsSync(filePath)) {
-        fs.writeFileSync(filePath, await section.innerHTML());
+        fs.writeFileSync(filePath, sectionHTML);
     }
 
     // TODO: Modify the HTML code (returned from 
