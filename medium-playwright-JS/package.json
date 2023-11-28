@@ -1,0 +1,14 @@
+{
+  "name": "medium-playwright-js",
+  "version": "0.0.1",
+  "description": "Leverage Playwright to scrape free articles from Medium",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Magdaleno",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}
