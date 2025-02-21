@@ -175,3 +175,5 @@ https://medium.com/aiguys/why-scaling-rags-for-production-is-so-hard-a2f540785e9
 https://towardsdatascience.com/paper-walkthrough-u-net-98877a2cd33c
 https://ai.plainenglish.io/encoder-only-vs-decoder-only-style-llm-architectures-understanding-the-differences-ca067c167632
 https://medium.com/@datadrifters/llama-3-1-int4-quantization-cut-costs-by-75-without-sacrificing-performance-420c58da01ab
+https://towardsdatascience.com/mlx-vs-mps-vs-cuda-a-benchmark-c5737ca6efc9
+https://towardsdatascience.com/how-fast-is-mlx-a-comprehensive-benchmark-on-8-apple-silicon-chips-and-4-cuda-gpus-378a0ae356a0

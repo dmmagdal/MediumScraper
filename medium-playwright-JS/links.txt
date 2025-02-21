@@ -247,3 +247,6 @@ https://medium.com/@daniel-klitzke/quantizing-openais-whisper-with-the-huggingfa
 https://towardsdatascience.com/optimizing-inventory-management-with-reinforcement-learning-a-hands-on-python-guide-7833df3d25a6
 https://towardsdatascience.com/transformer-diffusion-transfusion-d18d219f2a12
 https://medium.com/@palakprashant/generative-ai-fundamentals-transformers-and-text-generation-6d500c0b343f
+https://towardsdatascience.com/what-i-learned-in-my-first-9-months-as-a-freelance-data-scientist-f7401382dc62
+https://towardsdatascience.com/pytorch-and-mlx-for-apple-silicon-4f35b9f60e39
+https://medium.com/@koypish/mps-or-mlx-for-domestic-ai-the-answer-will-surprise-you-df4b111de8a0
